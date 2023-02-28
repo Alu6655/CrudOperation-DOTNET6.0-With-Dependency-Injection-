@@ -1,0 +1,118 @@
+﻿@model IEnumerable<Core.Models.Anxiety_RegPatient>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Pid)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Pfirstname)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Plastname)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Page)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Pgender)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Pdob)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Paddress)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Pstate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Pcity)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Pcontact)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Prefferalname)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Pbloodgroup)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Ppassword)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Pemail)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Rid)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Pid)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Pfirstname)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Plastname)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Page)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Pgender)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Pdob)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Paddress)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Pstate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Pcity)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Pcontact)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Prefferalname)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Pbloodgroup)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Ppassword)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Pemail)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Rid)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id=@item.Pid }) |
+                @Html.ActionLink("Delete", "Delete", new {  id=@item.Pid })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
